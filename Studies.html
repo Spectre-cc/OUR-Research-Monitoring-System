@@ -23,20 +23,20 @@
         <div class="container-fluid">
             <div class="container text-center">
                 <img class="d-inline-block align-text-bottom shadow" src="/style/img/psu-logo-wyt.jpg" style="width: 1.8em; border-radius: 100%;">
-                <a class="navbar-brand h1" href="#">PSU Research Monitor</a>
+                <a class="navbar-brand h1" href="/Dashboard.html">PSU Research Monitor</a>
             </div>
-            <div class="container d-flex justify-content-center">
+            <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse w-100 justify-content-center" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" href="#"><i class="bi bi-speedometer"></i> Dashboard</a>
+                        <a class="nav-link active" href="/Dashboard.html"><i class="bi bi-speedometer"></i> Dashboard</a>
                         <li class="nav-item dropdown mx-1">
                             <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="bi bi-displayport-fill"></i> CRUD Section</a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#"><i class="bi bi-book-half"></i> Studies</a></li>
-                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-person-fill"></i> Researchers</a></li>
+                              <li><a class="dropdown-item" href="/Studies.html"><i class="bi bi-book-half"></i> Studies</a></li>
+                              <li><a class="dropdown-item" href="/Researchers.html"><i class="bi bi-file-earmark-person-fill"></i> Researchers</a></li>
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item disabled" href="#"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Generate Report</a></li>
                             </ul>
@@ -49,27 +49,26 @@
                             </ul>
                         </li>
                     </div>
+                    <!-- <div class="btn-group dropstart">
+                        <button type="button" class="btn btn-outline-light rounded-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i> User</i>
+                        </button>
+                        <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-person-bounding-box"></i> Account</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-door-open-fill"></i> Sign Out</a></li>
+                        </ul>
+                    </div> -->
                 </div>
             </div>
         </div>
     </nav>
     <div class="container-fluid min-vh-100 m-0 p-0 pt-2">
-        <div class="container-fluid p-2 min-vh-100 bg-light bg-opacity-75">
+        <div class="container-fluid p-2 min-vh-100 bg-light">
             <div class="container-fluid d-flex justify-content-center table-responsive">
                 <table class="table table-hover table-striped table-bordered align-middle shadow container-fluid">
                     <thead class="table-dark">
-                        <th colspan="7" class="text-center">
-                            <div class="container-fluid d-flex justify-content-between">
-                                <div class="container">
-
-                                </div>
-                                <div class="container text-center fs-1">
-                                    Studies
-                                </div>
-                                <div class="container my-auto">
-                                    <button class="btn btn-success rounded-pill w-25"><i class="bi bi-journal-plus"></i> Add</button>
-                                </div>
-                            </div>
+                        <th colspan="7" class="text-center display-6">
+                            Studies
                         </th>
                     </thead>
                     <thead class="table-dark">
@@ -84,10 +83,12 @@
                         <th width="50" class="text-center"><i class="bi bi-list-ol"></i></th>
                         <th width="300" class="text-center">Title</th>
                         <th width="150" class="text-center">Category</th>
-                        <th width="200" class="text-center">Status</th>
+                        <th width="220" class="text-center">Status</th>
                         <th width="200" class="text-center">Proponents</th>
                         <th width="195" class="text-center">Remarks</th>
-                        <th width="auto" class="text-center"></th>
+                        <th width="220" class="text-center">
+                            <button class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"><i class="bi bi-journal-plus"></i> Add</button>
+                        </th>
                     </thead>
                     <tbody class="text-center text-wrap">
                         <tr>
@@ -98,7 +99,7 @@
                                 <div class="fs-6 text-center">
                                     <p>02/01/2023 - 04/01/2023</p>
                                 </div>
-                                <div class="progress border border-1 border-secondary bg-secondary" style="height:2em;">
+                                <div class="progress border border-1 border-secondary bg-secondary bg-opacity-25" style="height:2em;">
                                     <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                                         Ongoing: 70%
                                     </div>
@@ -175,6 +176,69 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-success text-light m-0 ">
+                <div class="container-fluid text-center">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-book-half"></i> Add New Study</h1>
+                </div>
+            </div>
+            <form class="m-0 p-0">
+                <div class="modal-body">
+                    <div class="mb-1">
+                        <label for="title" class="col-form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter research title...">
+                    </div>
+                    <div class="mb-1">
+                        <label for="category" class="col-form-label">Category:</label>
+                        <select class="form-select" aria-label="Default select example" name="category" id="category">
+                            <option selected disabled>Select research category...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-1 d-flex gap-1">
+                        <div class="container-fluid p-0 m-0">
+                            <label for="startDate" class="col-form-label">Start Date:</label>
+                            <input type="date" class="form-control" id="startDate" name="startDate">
+                        </div>
+                        <div class="container-fluid p-0 m-0">
+                            <label for="endDate" class="col-form-label">End Date:</label>
+                            <input type="date" class="form-control" id="endDate" name="endDate">
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="status" class="col-form-label">Status:</label>
+                        <select class="form-select" aria-label="Default select example" name="status" id="status">
+                            <option selected disabled>Select research status...</option>
+                            <option value="Complete">Complete</option>
+                            <option value="Ongoing">Ongoing</option>
+                            <option value="Overdue">Overdue</option>
+                        </select>
+                    </div>
+                    <div class="mb-1">
+                      <label for="proponents" class="col-form-label">Proponents:</label>
+                      <textarea class="form-control" id="proponents" name="proponents" placeholder="Enter proponent names..."></textarea>
+                    </div>
+                    <div class="mb-1">
+                      <label for="remarks" class="col-form-label">Remarks:</label>
+                      <textarea class="form-control" id="remarks" name="remarks" placeholder="Enter remarks..."></textarea>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid text-center">
+                        <button type="submit" name="addStudy" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i> Submit</button>
+                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cancel</button>
+                    </div>
+                </div>
+            </form>
+          </div>
         </div>
     </div>
 </body>

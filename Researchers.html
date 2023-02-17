@@ -23,20 +23,20 @@
         <div class="container-fluid">
             <div class="container text-center">
                 <img class="d-inline-block align-text-bottom shadow" src="/style/img/psu-logo-wyt.jpg" style="width: 1.8em; border-radius: 100%;">
-                <a class="navbar-brand h1" href="#">PSU Research Monitor</a>
+                <a class="navbar-brand h1" href="/Dashboard.html">PSU Research Monitor</a>
             </div>
-            <div class="container d-flex justify-content-center">
+            <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse w-100 justify-content-center" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" href="#"><i class="bi bi-speedometer"></i> Dashboard</a>
+                        <a class="nav-link active" href="/Dashboard.html"><i class="bi bi-speedometer"></i> Dashboard</a>
                         <li class="nav-item dropdown mx-1">
                             <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="bi bi-displayport-fill"></i> CRUD Section</a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#"><i class="bi bi-book-half"></i> Studies</a></li>
-                              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-person-fill"></i> Researchers</a></li>
+                              <li><a class="dropdown-item" href="/Studies.html"><i class="bi bi-book-half"></i> Studies</a></li>
+                              <li><a class="dropdown-item" href="/Researchers.html"><i class="bi bi-file-earmark-person-fill"></i> Researchers</a></li>
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item disabled" href="#"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Generate Report</a></li>
                             </ul>
@@ -49,12 +49,21 @@
                             </ul>
                         </li>
                     </div>
+                    <!-- <div class="btn-group dropstart">
+                        <button type="button" class="btn btn-outline-light rounded-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i> User</i>
+                        </button>
+                        <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-person-bounding-box"></i> Account</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-door-open-fill"></i> Sign Out</a></li>
+                        </ul>
+                    </div> -->
                 </div>
             </div>
         </div>
     </nav>
     <div class="container-fluid min-vh-100 m-0 p-0 pt-2">
-        <div class="container-fluid p-2 min-vh-100 bg-light bg-opacity-75">
+        <div class="container-fluid p-2 min-vh-100 bg-light">
             <div class="container-fluid d-flex justify-content-center">
                 <table class="table table-hover table-striped table-bordered align-middle shadow container-md">
                     <thead class="table-dark">
@@ -72,7 +81,7 @@
                         <th width="10%"><i class="bi bi-list-ol"></i></th>
                         <th width="50%">Name</th>
                         <th width="40%" class="text-center">
-                            <button class="btn btn-success rounded-pill"><i class="bi bi-person-fill-add"></i> Add</button>
+                            <button class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"><i class="bi bi-person-fill-add"></i> Add</button>
                         </th>
                     </thead>
                     <tbody class="">
@@ -119,6 +128,45 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-success text-light m-0">
+                <div class="container-fluid text-center">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-file-earmark-person-fill"></i> Add Researcher</h1>
+                </div>
+            </div>
+            <form class="m-0 p-0">
+                <div class="modal-body">
+                    <div class="mb-2 d-flex gap-1 align-items-end">
+                        <div class="container-fluid p-0 m-0">
+                            <label for="fName" class="col-form-label" placeholder="Enter research title...">Name:</label>
+                            <input type="text" class="form-control" id="fName" name="fName" placeholder="First name...">
+                        </div>
+                        <div class="container-fluid p-0 m-0">
+                            <input type="text" class="form-control" id="mName" name="mName"  placeholder="Middle name...">
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <input type="text" class="form-control" id="lName" name="lName" placeholder="Last name...">
+                    </div>
+                    <div class="">
+                        <label for="birthDate" class="col-form-label">Birth Date:</label>
+                        <input type="date" class="form-control" id="birthDate" name="birthDate">
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid text-center">
+                        <button type="submit" name="addResearcher" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i> Submit</button>
+                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cancel</button>
+                    </div>
+                </div>
+            </form>
+          </div>
         </div>
     </div>
 </body>
