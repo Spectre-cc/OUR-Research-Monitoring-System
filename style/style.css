@@ -1,5 +1,5 @@
 #index-body {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("/img/bg.jpg"), no-repeat, center;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("/style/img/bg.jpg"), no-repeat, center;
     background-size:cover;
 }
 .light-bg{
