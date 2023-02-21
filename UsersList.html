@@ -31,14 +31,11 @@
                 </button>
                 <div class="collapse navbar-collapse w-100 justify-content-center" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" href="/Dashboard.html"><i class="bi bi-speedometer"></i> Dashboard</a>
                         <li class="nav-item dropdown mx-1">
-                            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="bi bi-displayport-fill"></i> CRUD Section</a>
+                            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="bi bi-people-fill"></i> Users</a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="/Studies.html"><i class="bi bi-book-half"></i> Studies</a></li>
-                              <li><a class="dropdown-item" href="/Researchers.html"><i class="bi bi-file-earmark-person-fill"></i> Researchers</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item disabled" href="#"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Generate Report</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill"></i> Staff</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill-lock"></i> Admin</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -64,65 +61,41 @@
     </nav>
     <div class="container-fluid min-vh-100 m-0 p-0 pt-2">
         <div class="container-fluid p-2 min-vh-100 bg-light">
-            <div class="container-fluid d-flex justify-content-center">
-                <table class="table table-hover table-striped table-bordered align-middle shadow container-md">
+            <div class="container-fluid d-flex justify-content-center table-responsive">
+                <table class="table table-hover table-striped table-bordered align-middle shadow container-fluid">
                     <thead class="table-dark">
-                        <th colspan="3" class="text-center display-6 m-0 p-0">Researcher Profiles</th>
+                        <th colspan="7" class="text-center display-6">
+                            Users
+                        </th>
                     </thead>
                     <thead class="table-dark">
-                        <th colspan="3" class="text-center">
-                            <form action="" method="get" class="container w-100 m-0 p-0 d-flex gap-0 border border-1 border-secondary rounded-pill shadow">
-                                <input type="search" name="searchResearcher" id="searchResearcher" class="form-control rounded-start-5 px-5" placeholder="Enter researcher name...">
+                        <th colspan="7" class="text-center">
+                            <form action="" method="get" class="container-fluid m-0 p-0 d-flex gap-0 border border-1 border-secondary rounded-pill shadow">
+                                <input type="search" name="searchUser" id="searchUser" class="form-control rounded-start-5 px-5" placeholder="Enter search user name...">
                                 <button type="submit" name="submitSearch" class="btn btn-primary rounded-end-5 w-25"><i class="bi bi-search"></i></button>
                             </form>
                         </th>
                     </thead>
                     <thead class="table-dark ">
-                        <th width="10%"><i class="bi bi-list-ol"></i></th>
-                        <th width="50%">Name</th>
-                        <th width="40%" class="text-center">
+                        <th width="50" class="text-center"><i class="bi bi-list-ol"></i></th>
+                        <th width="300" class="text-center">Name</th>
+                        <th width="150" class="text-center">Email</th>
+                        <th width="220" class="text-center">Contact No.</th>
+                        <th width="220" class="text-center">
                             <button class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"><i class="bi bi-person-fill-add"></i> Add</button>
                         </th>
                     </thead>
-                    <tbody class="">
+                    <tbody class="text-center text-wrap">
                         <tr>
-                            <td>01</td>
-                            <td>John Doe</td>
-                            <td class="d-flex justify-content-center gap-1">
-                                <button class="btn btn-primary rounded-pill"><i class="bi bi-eye-fill"></i> View</button>
-                                <button class="btn btn-danger rounded-pill"><i class="bi bi-trash-fill"></i> Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>John Doe</td>
-                            <td class="d-flex justify-content-center gap-1">
-                                <button class="btn btn-primary rounded-pill"><i class="bi bi-eye-fill"></i> View</button>
-                                <button class="btn btn-danger rounded-pill"><i class="bi bi-trash-fill"></i> Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>John Doe</td>
-                            <td class="d-flex justify-content-center gap-1">
-                                <button class="btn btn-primary rounded-pill"><i class="bi bi-eye-fill"></i> View</button>
-                                <button class="btn btn-danger rounded-pill"><i class="bi bi-trash-fill"></i> Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>John Doe</td>
-                            <td class="d-flex justify-content-center gap-1">
-                                <button class="btn btn-primary rounded-pill"><i class="bi bi-eye-fill"></i> View</button>
-                                <button class="btn btn-danger rounded-pill"><i class="bi bi-trash-fill"></i> Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>John Doe</td>
-                            <td class="d-flex justify-content-center gap-1">
-                                <button class="btn btn-primary rounded-pill"><i class="bi bi-eye-fill"></i> View</button>
-                                <button class="btn btn-danger rounded-pill"><i class="bi bi-trash-fill"></i> Delete</button>
+                            <td>001</td>
+                            <td>Jose Trinidad Batumbakal</td>
+                            <td>example@email.com</td>
+                            <td>09XXXXXXXXX</td>
+                            <td class="">
+                                <div class="container-fluid d-flex justify-content-center gap-1">
+                                    <button class="btn btn-primary rounded-pill"><i class="bi bi-pencil-square"></i> Edit</button>
+                                    <button class="btn btn-danger rounded-pill"><i class="bi bi-trash-fill"></i> Delete</button>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -130,13 +103,12 @@
             </div>
         </div>
     </div>
-
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header bg-success text-light m-0">
+            <div class="modal-header bg-success text-light m-0 ">
                 <div class="container-fluid text-center">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-file-earmark-person-fill"></i> Add Researcher</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-person-fill-add"></i> Add New User</h1>
                 </div>
             </div>
             <form class="m-0 p-0">
@@ -154,8 +126,16 @@
                         <input type="text" class="form-control" id="lName" name="lName" placeholder="Last name...">
                     </div>
                     <div class="">
-                        <label for="birthDate" class="col-form-label">Birth Date:</label>
-                        <input type="date" class="form-control" id="birthDate" name="birthDate">
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com">
+                    </div>
+                    <div class="">
+                        <label for="password" class="col-form-label">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="********">
+                    </div>
+                    <div class="">
+                        <label for="cNumber" class="col-form-label">Contact Number:</label>
+                        <input type="text" class="form-control" id="cNumber" name="cNumber" placeholder="09XXXXXXXXX">
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -28,7 +28,7 @@
                 </div>
                 <p class="display-3 my-0">Research Monitoring System</p>
             </div>
-            <form class="container bg-light w-50 p-4 d-flex align-items-center rounded" action="/page01.html" method="post">
+            <form class="container bg-light w-50 p-3 d-flex align-items-center rounded" action="/page01.html" method="post">
                 <div class="container-fluid ">
                     <div class="mb-2">
                         <label class="form-label m-0" for="userEmail"><i class="bi bi-envelope-at-fill"></i> Email</label>
@@ -37,13 +37,70 @@
                     <div class="mb-2">
                         <label class="form-label m-0" for="userPassword"><i class="bi bi-shield-lock-fill"></i> Password</label>
                         <input type="password" class="form-control" id="userPassword" placeholder="...">
-                        <a href="#" class="link-secondary m-0">Forgot your password?</a>
+                        <a href="#" class="link-secondary m-0" data-bs-toggle="modal" data-bs-target="#passwordReset" data-bs-whatever="@getbootstrap">Forgot your password?</a>
                     </div>
-                    <div class="container-fluid m-0 text-lg-center">
+                    <div class="container-fluid mb-2 text-lg-center">
                         <button class="btn btn-primary px-4" type="submit"><i class="bi bi-box-arrow-in-right"></i> Sign In</button>
+                    </div>
+                    <div class="container-fluid w-50 text-center">
+                        <a href="#" class="link-secondary m-0" data-bs-toggle="modal" data-bs-target="#adminSignIn" data-bs-whatever="@getbootstrap"><i class="bi bi-person-lock"></i> Admin Sign In</a>
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+    <div class="modal fade" id="passwordReset" tabindex="-1" aria-labelledby="passwordResetLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-warning text-bg-warning m-0">
+                <div class="container-fluid text-center">
+                    <h1 class="modal-title fs-5" id="passwordResetLabel"><i class="bi bi-person-lock"></i> Password Reset</h1>
+                </div>
+            </div>
+            <form class="m-0 p-0">
+                <div class="modal-body">
+                    <div class="mb-1">
+                        <label for="title" class="col-form-label"><i class="bi bi-envelope-at-fill"></i> Email:</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Enter email address...">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid text-center">
+                        <button type="submit" name="passReset" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i> Submit</button>
+                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cancel</button>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="adminSignIn" tabindex="-1" aria-labelledby="adminSignInLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-bg-primary m-0">
+                <div class="container-fluid text-center">
+                    <h1 class="modal-title fs-5" id="adminSignIn"><i class="bi bi-arrow-counterclockwise"></i> Admin Sign In</h1>
+                </div>
+            </div>
+            <form class="m-0 p-0">
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label class="form-label m-0" for="userEmail"><i class="bi bi-envelope-at-fill"></i> Email</label>
+                        <input type="email" class="form-control" id="userEmail" placeholder="example@email.com">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label m-0" for="userPassword"><i class="bi bi-shield-lock-fill"></i> Password</label>
+                        <input type="password" class="form-control" id="userPassword" placeholder="...">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid text-center">
+                        <button type="submit" name="adminSignIn" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i> Submit</button>
+                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cancel</button>
+                    </div>
+                </div>
+            </form>
+          </div>
         </div>
     </div>
 </body>
